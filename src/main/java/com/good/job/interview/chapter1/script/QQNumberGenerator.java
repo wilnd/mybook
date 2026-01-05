@@ -1,9 +1,6 @@
 package com.good.job.interview.chapter1.script;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * 生成1000万个QQ号（重复率0.01%：999.9万唯一 + 1000个重复）
@@ -11,13 +8,13 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 public class QQNumberGenerator {// 核心：限定QQ号范围为10000000 ~ 20000000
     // 核心配置：顺序生成的起始、结束值（刚好1000万个不重复数）
-    private static final long START_QQ = 10000000L;    // 起始值：1000万
-    private static final long TOTAL_COUNT = 10000000L; // 生成总数：1000万
+    private static final long START_QQ = 100000000L;    // 起始值：1000万
+    private static final long TOTAL_COUNT = 1000000000L; // 生成总数：1亿
     private static final long END_QQ = START_QQ + TOTAL_COUNT - 1; // 结束值：19999999
 
     public static void main(String[] args) {
         String outputFile = "1000w_sequential_qq.txt";
-        System.out.println("===== 开始顺序生成1000万个不重复QQ号 =====");
+        System.out.println("===== 开始顺序生成10亿个不重复QQ号 =====");
         System.out.println("生成范围：" + START_QQ + " ~ " + END_QQ);
         System.out.println("总数量：" + TOTAL_COUNT + " 个（100%不重复）");
         long startMs = System.currentTimeMillis();

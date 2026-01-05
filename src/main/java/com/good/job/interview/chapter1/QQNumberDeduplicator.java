@@ -95,7 +95,6 @@ public class QQNumberDeduplicator {
             String line;
             long outputCount = 0;
             while ((line = reader.readLine()) != null) {
-                System.out.println("正在处理：" + line);
                 long qqNum = Long.parseLong(line.trim());
                 // 判断是否已存在且未输出过
                 if (bitMap.get(qqNum) && !outputBitMap.get(qqNum)) {
